@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="raylib\src\raudio.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="raylib\src\rcore.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="raylib\src\rmodels.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="raylib\src\rshapes.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="raylib\src\rtext.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="raylib\src\rtextures.c">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="raylib\src\config.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\RGFW\RGFW.h">
+      <Filter>src\external\RGFW</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\RGFW\deps\minigamepad.h">
+      <Filter>src\external\RGFW\deps</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\cgltf.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\cgltf_write.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\dirent.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\dr_flac.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\dr_mp3.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\dr_wav.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\fix_win32_compatibility.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glad.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glad_gles2.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glfw\deps\getopt.h">
+      <Filter>src\external\glfw\deps</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glfw\deps\glad\gl.h">
+      <Filter>src\external\glfw\deps\glad</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glfw\deps\glad\gles2.h">
+      <Filter>src\external\glfw\deps\glad</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glfw\deps\glad\vulkan.h">
+      <Filter>src\external\glfw\deps\glad</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glfw\deps\mingw\_mingw_dxhelper.h">
+      <Filter>src\external\glfw\deps\mingw</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glfw\deps\mingw\dinput.h">
+      <Filter>src\external\glfw\deps\mingw</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glfw\deps\mingw\xinput.h">
+      <Filter>src\external\glfw\deps\mingw</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glfw\include\GLFW\glfw3.h">
+      <Filter>src\external\glfw\include\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glfw\include\GLFW\glfw3native.h">
+      <Filter>src\external\glfw\include\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glfw\src\cocoa_joystick.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glfw\src\cocoa_platform.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glfw\src\cocoa_time.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glfw\src\internal.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glfw\src\linux_joystick.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glfw\src\mappings.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glfw\src\null_joystick.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glfw\src\null_platform.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glfw\src\platform.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glfw\src\posix_poll.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glfw\src\posix_thread.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glfw\src\posix_time.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glfw\src\win32_joystick.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glfw\src\win32_platform.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glfw\src\win32_thread.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glfw\src\win32_time.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glfw\src\wl_platform.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glfw\src\x11_platform.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\glfw\src\xkb_unicode.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\jar_mod.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\jar_xm.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\m3d.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\miniaudio.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\par_shapes.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\qoa.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\qoi.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\rlsw.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\rltexgpu.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\rprand.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\sdefl.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\sinfl.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\stb_image.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\stb_image_resize2.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\stb_image_write.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\stb_perlin.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\stb_rect_pack.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\stb_truetype.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\tinyobj_loader_c.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\vox_loader.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\external\win32_clipboard.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\raylib.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\raymath.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\rcamera.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\rgestures.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="raylib\src\rlgl.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{5F641656-B4F7-3F78-A5FA-5E59D610F760}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\external">
+      <UniqueIdentifier>{EAFB81C2-17AD-366A-A41C-C9F9587C7F20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\external\RGFW">
+      <UniqueIdentifier>{4776E83A-2F1F-3546-9DD1-FAA3C9363831}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\external\RGFW\deps">
+      <UniqueIdentifier>{A3A2BF98-6BD4-3DA3-B344-B521F01197E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\external\glfw">
+      <UniqueIdentifier>{AF545785-17D8-30BF-9188-C1F27BF2FE84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\external\glfw\deps">
+      <UniqueIdentifier>{250FE4B3-FA8D-3235-8403-4D87672EF1A5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\external\glfw\deps\glad">
+      <UniqueIdentifier>{FB14D5F5-F915-37F6-B317-D4DB3C35D878}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\external\glfw\deps\mingw">
+      <UniqueIdentifier>{65FBDF1E-3830-3500-B17E-917796512B81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\external\glfw\include">
+      <UniqueIdentifier>{CA41564A-9142-30BD-905D-A043297C180E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\external\glfw\include\GLFW">
+      <UniqueIdentifier>{2A739097-AC1A-3E34-859C-8F468CFE4860}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

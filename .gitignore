@@ -1,0 +1,7 @@
+build/
+build-win/
+build-em/
+build-mac/
+Emscripten/emsdk/
+.vs/
+out/

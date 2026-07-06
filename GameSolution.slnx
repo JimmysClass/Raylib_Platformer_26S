@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Solution>
+	<Configurations>
+		<BuildType Name="Debug"/>
+		<BuildType Name="Release"/>
+		<Platform Name="x64"/>
+	</Configurations>
+	<Project Path="Source/GameProject.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="f8578cb4-a74b-3772-aac1-ab784dfd00cc" DefaultStartup="true">
+		<BuildDependency Project="Libraries/glfw.vcxproj"/>
+		<BuildDependency Project="Libraries/raylib.vcxproj"/>
+	</Project>
+	<Project Path="Libraries/glfw.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="1463f7a5-6e0f-3636-b3db-f70bfcfb4e86">
+	</Project>
+	<Project Path="Libraries/raylib.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="216bf181-bcd2-32e0-98e0-6b2e89d2bf58">
+		<BuildDependency Project="Libraries/glfw.vcxproj"/>
+	</Project>
+</Solution>
