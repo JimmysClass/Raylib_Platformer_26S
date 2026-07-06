@@ -5,6 +5,7 @@
 #include "PlatformerGame.h"
 #include "Helpers/MathFuncs.h"
 #include "Helpers/Sprite2D.h"
+#include "PlayerObject.h"
 
 PlatformerGame::PlatformerGame()
 {
@@ -12,6 +13,8 @@ PlatformerGame::PlatformerGame()
     srand( rd() );
 
     Textures["SoccerBall"] = LoadTexture( "Data/Textures/SoccerBall.png" );
+
+    Player = new PlayerObject( this );
 
     reset();
 }
@@ -30,6 +33,7 @@ void PlatformerGame::reset()
 
 void PlatformerGame::update(float deltaTime)
 {
+    Player->update( deltaTime );
 }
 
 void PlatformerGame::draw()
@@ -39,6 +43,8 @@ void PlatformerGame::draw()
     DrawCircle( 400, 300, 50, RED );
     DrawTexture( getTexture("SoccerBall"), 500, 300, WHITE );
     DrawText( "Hello", 600, 300, 50, DARKGRAY );
+
+    Player->draw();
 }
 
 void PlatformerGame::onKey(int keyCode, KeyState keyState)

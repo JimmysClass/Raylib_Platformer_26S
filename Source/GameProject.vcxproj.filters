@@ -16,6 +16,9 @@
     <ClCompile Include="Game\PlatformerGame.cpp">
       <Filter>Source\Game</Filter>
     </ClCompile>
+    <ClCompile Include="Game\PlayerObject.cpp">
+      <Filter>Source\Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Helpers\InputTypes.h">
@@ -34,6 +37,9 @@
       <Filter>Source\Helpers</Filter>
     </ClInclude>
     <ClInclude Include="Game\PlatformerGame.h">
+      <Filter>Source\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PlayerObject.h">
       <Filter>Source\Game</Filter>
     </ClInclude>
   </ItemGroup>

@@ -9,6 +9,8 @@
 #include "Helpers/InputTypes.h"
 #include "Helpers/Vector.h"
 
+class PlayerObject;
+
 class PlatformerGame
 {
 public:
@@ -29,4 +31,6 @@ public:
 
 private:
     std::unordered_map<std::string, Texture2D> Textures;
+
+    PlayerObject* Player;
 };
