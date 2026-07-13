@@ -12,13 +12,13 @@ void updateDrawFrame();
 static const int c_screenWidth = 1280;
 static const int c_screenHeight = 720;
 
-PlatformerGame* g_game = nullptr;
+CPlatformerGame* g_game = nullptr;
 
 int main()
 {
     InitWindow( c_screenWidth, c_screenHeight, "Game Window" );
 
-    g_game = new PlatformerGame();
+    g_game = new CPlatformerGame();
 
 #if PLATFORM_WEB
     emscripten_set_main_loop( updateDrawFrame, 0, 1 );

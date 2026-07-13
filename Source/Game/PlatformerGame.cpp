@@ -3,23 +3,23 @@
 #include <float.h>
 
 #include "PlatformerGame.h"
+#include "Player.h"
 #include "Helpers/MathFuncs.h"
 #include "Helpers/Sprite2D.h"
-#include "PlayerObject.h"
 
-PlatformerGame::PlatformerGame()
+CPlatformerGame::CPlatformerGame()
 {
     std::random_device rd;
     srand( rd() );
 
     Textures["SoccerBall"] = LoadTexture( "Data/Textures/SoccerBall.png" );
 
-    Player = new PlayerObject( this );
+    Player = new CPlayer( this );
 
     reset();
 }
 
-PlatformerGame::~PlatformerGame()
+CPlatformerGame::~CPlatformerGame()
 {
     for( auto texturePair : Textures )
     {
@@ -27,16 +27,18 @@ PlatformerGame::~PlatformerGame()
     }
 }
 
-void PlatformerGame::reset()
+void CPlatformerGame::reset()
 {
+    Player->setPosition( {200,300} );
+    //Player->setVelocity( {0,0} );
 }
 
-void PlatformerGame::update(float deltaTime)
+void CPlatformerGame::update(float deltaTime)
 {
     Player->update( deltaTime );
 }
 
-void PlatformerGame::draw()
+void CPlatformerGame::draw()
 {
     ClearBackground( WHITE );
 
@@ -45,25 +47,35 @@ void PlatformerGame::draw()
     DrawText( "Hello", 600, 300, 50, DARKGRAY );
 
     Player->draw();
+
+    if( DebugVisualsEnabled )
+    {
+        Player->drawDebugVisuals();
+    }
 }
 
-void PlatformerGame::onKey(int keyCode, KeyState keyState)
+void CPlatformerGame::onKey(int keyCode, KeyState keyState)
 {
     if( keyCode == 'R' && keyState == KeyState::Pressed )
     {
         reset();
     }
+
+    if( keyCode == KEY_TAB && keyState == KeyState::Pressed )
+    {
+        DebugVisualsEnabled = !DebugVisualsEnabled;
+    }
 }
 
-void PlatformerGame::onMouseButton(int button, KeyState keyState)
+void CPlatformerGame::onMouseButton(int button, KeyState keyState)
 {
 }
 
-void PlatformerGame::onMouseMove(int x, int y)
+void CPlatformerGame::onMouseMove(int x, int y)
 {
 }
 
-Texture2D PlatformerGame::getTexture(const char* textureName) const
+Texture2D CPlatformerGame::getTexture(const char* textureName) const
 {
     auto it = Textures.find( textureName );
     if( it != Textures.end() )

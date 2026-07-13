@@ -2,23 +2,26 @@
 
 #include "Helpers/Vector.h"
 
-class PlatformerGame;
+class CPlatformerGame;
 
-class PlayerObject
+class CPlayer
 {
 public:
-    PlayerObject(PlatformerGame* game);
-    ~PlayerObject();
+    CPlayer(CPlatformerGame* game);
+    ~CPlayer();
 
     void update(float deltaTime);
     void draw();
+    void drawDebugVisuals();
 
     void setPosition(vec2 pos);
 
 private:
-    PlatformerGame* GameInstance;
+    CPlatformerGame* Game;
 
     vec2 Position;
     vec2 Scale;
     vec2 Velocity;
+
+    vec2 ColliderFootOffset;
 };

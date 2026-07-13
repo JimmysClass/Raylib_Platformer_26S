@@ -9,13 +9,13 @@
 #include "Helpers/InputTypes.h"
 #include "Helpers/Vector.h"
 
-class PlayerObject;
+class CPlayer;
 
-class PlatformerGame
+class CPlatformerGame
 {
 public:
-    PlatformerGame();
-    virtual ~PlatformerGame();
+    CPlatformerGame();
+    virtual ~CPlatformerGame();
 
     void reset();
     void update(float deltaTime);
@@ -32,5 +32,7 @@ public:
 private:
     std::unordered_map<std::string, Texture2D> Textures;
 
-    PlayerObject* Player;
+    bool DebugVisualsEnabled = false;
+
+    CPlayer* Player;
 };

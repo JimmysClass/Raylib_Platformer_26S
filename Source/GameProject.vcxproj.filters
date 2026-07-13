@@ -16,7 +16,7 @@
     <ClCompile Include="Game\PlatformerGame.cpp">
       <Filter>Source\Game</Filter>
     </ClCompile>
-    <ClCompile Include="Game\PlayerObject.cpp">
+    <ClCompile Include="Game\Player.cpp">
       <Filter>Source\Game</Filter>
     </ClCompile>
   </ItemGroup>
@@ -39,7 +39,7 @@
     <ClInclude Include="Game\PlatformerGame.h">
       <Filter>Source\Game</Filter>
     </ClInclude>
-    <ClInclude Include="Game\PlayerObject.h">
+    <ClInclude Include="Game\Player.h">
       <Filter>Source\Game</Filter>
     </ClInclude>
   </ItemGroup>
