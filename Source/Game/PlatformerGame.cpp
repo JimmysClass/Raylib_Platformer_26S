@@ -2,6 +2,7 @@
 #include <random>
 #include <float.h>
 
+#include "Ball.h"
 #include "PlatformerGame.h"
 #include "Player.h"
 #include "Helpers/MathFuncs.h"
@@ -15,6 +16,9 @@ CPlatformerGame::CPlatformerGame()
     Textures["SoccerBall"] = LoadTexture( "Data/Textures/SoccerBall.png" );
 
     Player = new CPlayer( this );
+
+    Ball = new CBall( this );
+    Ball->setVelocity({ 50,0 });
 
     reset();
 }
@@ -36,6 +40,7 @@ void CPlatformerGame::reset()
 void CPlatformerGame::update(float deltaTime)
 {
     Player->update( deltaTime );
+    Ball->update( deltaTime );
 }
 
 void CPlatformerGame::draw()
@@ -47,11 +52,23 @@ void CPlatformerGame::draw()
     DrawText( "Hello", 600, 300, 50, DARKGRAY );
 
     Player->draw();
+    Ball->draw();
 
     if( DebugVisualsEnabled )
     {
         Player->drawDebugVisuals();
     }
+
+    // Temp code to prototype circle/line collision
+    LineStart = { 300,600 };
+    LineEnd = { 1000,600 };
+    //CirclePos = { 200,550 };
+    CircleRadius = 60;
+
+    bool isOverlapping = IsCircleOverlappingLine( LineStart, LineEnd, CirclePos, CircleRadius );
+
+    DrawLine( LineStart.X, LineStart.Y, LineEnd.X, LineEnd.Y, isOverlapping ? GREEN : RED );
+    DrawCircle( CirclePos.X, CirclePos.Y, CircleRadius, isOverlapping ? GREEN : BLUE );
 }
 
 void CPlatformerGame::onKey(int keyCode, KeyState keyState)
@@ -73,6 +90,7 @@ void CPlatformerGame::onMouseButton(int button, KeyState keyState)
 
 void CPlatformerGame::onMouseMove(int x, int y)
 {
+    CirclePos.set(x, y);
 }
 
 Texture2D CPlatformerGame::getTexture(const char* textureName) const

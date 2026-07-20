@@ -9,6 +9,7 @@
 #include "Helpers/InputTypes.h"
 #include "Helpers/Vector.h"
 
+class CBall;
 class CPlayer;
 
 class CPlatformerGame
@@ -35,4 +36,11 @@ private:
     bool DebugVisualsEnabled = false;
 
     CPlayer* Player;
+    CBall* Ball;
+
+    // Temp variables to prototype circle/line collision
+    vec2 LineStart;
+    vec2 LineEnd;
+    vec2 CirclePos;
+    float CircleRadius;
 };

@@ -28,3 +28,23 @@ float radToDeg(float radians)
 {
     return radians * (180.0f / PI);
 }
+
+bool IsCircleOverlappingLine(vec2 lineStart, vec2 lineEnd, vec2 circlePos, float circleRadius)
+{
+    vec2 circleDir = circlePos - lineStart;
+    vec2 lineDir = lineEnd - lineStart;
+    float lineLength = lineDir.length();
+    lineDir.normalize();
+
+    float n = circleDir.dot( lineDir );
+    n = clamp( n, 0, lineLength );
+
+    vec2 nearestPointOnLine = lineDir * n + lineStart;
+
+    float distFromLine = (circlePos - nearestPointOnLine).length();
+
+    if( distFromLine <= circleRadius )
+        return true;
+
+    return false;
+}

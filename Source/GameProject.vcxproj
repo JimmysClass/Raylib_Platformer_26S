@@ -196,10 +196,12 @@
   <ItemGroup>
     <None Include="..\.gitignore">
     </None>
+    <ClInclude Include="Game\Ball.h" />
     <ClInclude Include="Game\PlatformerGame.h" />
     <ClInclude Include="Game\Player.h" />
     <ClInclude Include="Helpers\Drawing.h" />
     <ClInclude Include="Helpers\InputTypes.h" />
+    <ClCompile Include="Game\Ball.cpp" />
     <ClCompile Include="Game\PlatformerGame.cpp" />
     <ClCompile Include="Game\Player.cpp" />
     <ClCompile Include="Helpers\Drawing.cpp" />
