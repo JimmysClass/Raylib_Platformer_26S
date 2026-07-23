@@ -10,6 +10,7 @@
 #include "Helpers/Vector.h"
 
 class CBall;
+class CBlock;
 class CPlayer;
 
 class CPlatformerGame
@@ -29,12 +30,14 @@ public:
 
     // Getters.
     Texture2D getTexture(const char* textureName) const;
+    std::vector<CBlock*>& getBlocks() { return Blocks; }
 
 private:
     std::unordered_map<std::string, Texture2D> Textures;
 
     bool DebugVisualsEnabled = false;
 
+    std::vector<CBlock*> Blocks;
     CPlayer* Player;
     CBall* Ball;
 

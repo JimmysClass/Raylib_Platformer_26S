@@ -3,6 +3,7 @@
 #include <float.h>
 
 #include "Ball.h"
+#include "Block.h"
 #include "PlatformerGame.h"
 #include "Player.h"
 #include "Helpers/MathFuncs.h"
@@ -19,6 +20,11 @@ CPlatformerGame::CPlatformerGame()
 
     Ball = new CBall( this );
     Ball->setVelocity({ 50,0 });
+
+    Blocks.push_back( new CBlock( 100,500, 200,50 ) );
+    Blocks.push_back( new CBlock( 400,400, 200,50 ) );
+    Blocks.push_back( new CBlock( 700,300, 200,50 ) );
+    Blocks.push_back( new CBlock( 1000,200, 200,50 ) );
 
     reset();
 }
@@ -47,12 +53,17 @@ void CPlatformerGame::draw()
 {
     ClearBackground( WHITE );
 
-    DrawCircle( 400, 300, 50, RED );
-    DrawTexture( getTexture("SoccerBall"), 500, 300, WHITE );
-    DrawText( "Hello", 600, 300, 50, DARKGRAY );
+    //DrawCircle( 400, 300, 50, RED );
+    //DrawTexture( getTexture("SoccerBall"), 500, 300, WHITE );
+    //DrawText( "Hello", 600, 300, 50, DARKGRAY );
 
     Player->draw();
     Ball->draw();
+
+    for( auto block : Blocks )
+    {
+        block->draw();
+    }
 
     if( DebugVisualsEnabled )
     {
@@ -62,7 +73,6 @@ void CPlatformerGame::draw()
     // Temp code to prototype circle/line collision
     LineStart = { 300,600 };
     LineEnd = { 1000,600 };
-    //CirclePos = { 200,550 };
     CircleRadius = 60;
 
     bool isOverlapping = IsCircleOverlappingLine( LineStart, LineEnd, CirclePos, CircleRadius );
