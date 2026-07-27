@@ -57,12 +57,12 @@ void CPlatformerGame::draw()
     //DrawTexture( getTexture("SoccerBall"), 500, 300, WHITE );
     //DrawText( "Hello", 600, 300, 50, DARKGRAY );
 
-    Player->draw();
-    Ball->draw();
+    //Player->draw();
+    //Ball->draw();
 
     for( auto block : Blocks )
     {
-        block->draw();
+        //block->draw();
     }
 
     if( DebugVisualsEnabled )
@@ -71,14 +71,35 @@ void CPlatformerGame::draw()
     }
 
     // Temp code to prototype circle/line collision
-    LineStart = { 300,600 };
+    LineStart = { 300,400 };
     LineEnd = { 1000,600 };
     CircleRadius = 60;
 
+    vec2 lineCenter = (LineStart + LineEnd) / 2;
+
     bool isOverlapping = IsCircleOverlappingLine( LineStart, LineEnd, CirclePos, CircleRadius );
 
-    DrawLine( LineStart.X, LineStart.Y, LineEnd.X, LineEnd.Y, isOverlapping ? GREEN : RED );
-    DrawCircle( CirclePos.X, CirclePos.Y, CircleRadius, isOverlapping ? GREEN : BLUE );
+    vec2 circleMovementDirection = lineCenter - CirclePos;
+    vec2 newDirection = getReflectedVector( LineStart, LineEnd, circleMovementDirection);
+
+    // Draw some debug lines.
+    vec2 lineDir = LineEnd - LineStart;
+    lineDir.normalize();
+    vec2 normal = { lineDir.Y, -lineDir.X };
+
+    vec2 circleToLine = lineCenter - CirclePos;
+    circleMovementDirection = circleToLine;
+
+    DrawLine(LineStart.X, LineStart.Y, LineEnd.X, LineEnd.Y, isOverlapping ? GREEN : RED);
+    DrawCircle(CirclePos.X, CirclePos.Y, CircleRadius, isOverlapping ? GREEN : BLUE);
+
+    DrawCircle(lineCenter.X, lineCenter.Y, 5, RED);
+    DrawLine(lineCenter.X, lineCenter.Y, CirclePos.X, CirclePos.Y, RED);
+
+    DrawLine( lineCenter.X, lineCenter.Y,
+              lineCenter.X + normal.X * 100, lineCenter.Y + normal.Y * 100, RED );
+    DrawLine( lineCenter.X, lineCenter.Y,
+              lineCenter.X + newDirection.X, lineCenter.Y + newDirection.Y, RED );
 }
 
 void CPlatformerGame::onKey(int keyCode, KeyState keyState)

@@ -12,3 +12,4 @@ float degToRad(float degrees);
 float radToDeg(float radians);
 
 bool IsCircleOverlappingLine(vec2 lineStart, vec2 lineEnd, vec2 circlePos, float circleRadius);
+vec2 getReflectedVector(vec2 lineStart, vec2 lineEnd, vec2 incomingVector);

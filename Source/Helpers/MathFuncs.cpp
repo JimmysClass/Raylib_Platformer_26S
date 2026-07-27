@@ -48,3 +48,16 @@ bool IsCircleOverlappingLine(vec2 lineStart, vec2 lineEnd, vec2 circlePos, float
 
     return false;
 }
+
+vec2 getReflectedVector(vec2 lineStart, vec2 lineEnd, vec2 incomingVector)
+{
+    vec2 lineDir = lineEnd - lineStart;
+    lineDir.normalize();
+    vec2 normal = { lineDir.Y, -lineDir.X };
+
+    float NdotD = normal.dot(incomingVector) * -1;
+    vec2 scaledNormal = normal * NdotD * 2;
+    vec2 reflectedVector = incomingVector + scaledNormal;
+
+    return reflectedVector;
+}
